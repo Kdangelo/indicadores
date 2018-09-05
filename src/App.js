@@ -5,6 +5,7 @@ import { SearchFormD } from './components/SearchFormD';
 
 import './App.css';
 import 'bulma/css/bulma.css';
+import { SubTitle } from './components/SubTitle';
 
 class App extends Component {
   state = { results: [] }
@@ -24,18 +25,20 @@ class App extends Component {
     return (
       <div className="App">
         <Title>Buscador de UF y dólar</Title>
+        <SubTitle>UF buscador</SubTitle>
         <div className='SearchForm-wrapper'>
           <SearchFormUf onResults={this._handleResults} />
         </div>
         {this.state.results.length === 0
-          ? <p>Sin resultados</p>
+          ? <p></p>
           : this._renderResults()
         }
+        <SubTitle>Dólar buscador</SubTitle>
         <div className='SearchForm-wrapper'>
           <SearchFormD onResults={this._handleResultsTwo} />
         </div>
         {this.state.results.length === 0
-          ? <p>Sin resultados</p>
+          ? <p></p>
           : this._renderResults()
         }
       </div>
