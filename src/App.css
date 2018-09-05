@@ -1,0 +1,10 @@
+.App {
+  padding-top: 3%;
+  text-align: center;
+}
+
+.SearchForm-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
